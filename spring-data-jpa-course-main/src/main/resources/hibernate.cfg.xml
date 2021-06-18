@@ -1,0 +1,44 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+
+    <session-factory>
+
+        <property name = "hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+
+        <property name = "hibernate.connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
+
+        <!-- Assume test is the database name -->
+
+        <property name = "hibernate.connection.url">
+            jdbc:mysql://db4free.net:3306/networkprj
+        </property>
+
+        <property name = "hibernate.connection.username">
+            networkprj
+        </property>
+
+        <property name = "hibernate.connection.password">
+            YoFH2QTsWB
+        </property>
+
+        <!-- List of XML mapping files -->
+        <mapping class="com.example.demo.entities.PatientInDB"/>
+        <mapping class="com.example.demo.entities.Doctor"/>
+        <mapping class="com.example.demo.entities.Games"/>
+        <mapping class="com.example.demo.entities.AvailableGames"/>
+        <mapping class="com.example.demo.entities.TimeData"/>
+
+    </session-factory>
+
+
+
+
+</hibernate-configuration>
